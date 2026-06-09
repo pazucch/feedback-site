@@ -17,7 +17,7 @@ $body = filter_input(
 $stmt = mysqli_prepare(
     $conn,
     "UPDATE feedback
-     SET body = ?
+     SET body = ?, date = NOW()
      WHERE id = ?"
 );
 
