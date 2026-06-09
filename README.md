@@ -63,6 +63,8 @@ http://localhost/feedback-site
 - Form validation
 - Store feedback in a MySQL database
 - Display submitted feedback
+- Update feedback content
+- Delete any feedback
 
 ## License
 
