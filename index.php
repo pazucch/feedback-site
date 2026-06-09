@@ -28,12 +28,25 @@
     empty($emailErr) &&
     empty($bodyErr)
   ) {
-      $sql = "INSERT INTO feedback (name, email, body)
-              VALUES ('$name', '$email', '$body')";
+      $stmt = mysqli_prepare(
+          $conn,
+          "INSERT INTO feedback (name, email, body)
+          VALUES (?, ?, ?)"
+      );
 
-      if(mysqli_query($conn, $sql)) {
+      mysqli_stmt_bind_param(
+          $stmt,
+          "sss",
+          $name,
+          $email,
+          $body
+      );
+
+      if(mysqli_stmt_execute($stmt)) {
           header('Location: feedback.php');
           exit;
+      } else {
+          echo 'Error: ' . mysqli_error($conn);
       }
   }
 ?>

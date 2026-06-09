@@ -17,7 +17,7 @@
     <?php endif; ?>
 
     <?php foreach($feedback as $item): ?>
-    <div class="card my-3 w-100">
+    <div class="card my-3">
         <div class="card-body">
 
             <div class="d-flex justify-content-between align-items-center">
@@ -41,13 +41,48 @@
                     </a>
 
                     <form action="delete.php" method="POST" class="m-0">
+
                         <input type="hidden" name="id" value="<?php echo $item['id']; ?>">
 
-                        <button type="submit" class="btn p-0 border-0 bg-transparent">
+                        <button type="button" class="btn p-0 border-0 bg-transparent" data-bs-toggle="modal"
+                            data-bs-target="#deleteModal<?php echo $item['id']; ?>">
 
                             <img src="img/delete.png" alt="Delete" class="img-fluid" style="max-width: 32px;">
-
                         </button>
+
+                        <div class="modal fade" id="deleteModal<?php echo $item['id']; ?>" tabindex="-1">
+
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Delete Feedback</h5>
+
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                        </button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        Are you sure you want to delete this feedback?
+                                    </div>
+
+                                    <div class="modal-footer">
+
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                            Cancel
+                                        </button>
+
+                                        <button type="submit" class="btn btn-danger">
+                                            Delete
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
                     </form>
 
                 </div>

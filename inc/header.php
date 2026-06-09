@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light mb-4">
         <div class="container">
-            <a class="navbar-brand" href="#">Traversy Media</a>
+            <a class="navbar-brand" href="https://github.com/bradtraversy/php-crash" target="_blank">Traversy Media</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,9 +28,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/PHPCrashCourse/feedback/feedback.php">Feedback</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/PHPCrashCourse/feedback/about.php">About</a>
                     </li>
                 </ul>
             </div>
