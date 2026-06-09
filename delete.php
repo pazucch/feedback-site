@@ -18,7 +18,7 @@ if(isset($_POST['id'])) {
     );
 
     if(mysqli_stmt_execute($stmt)) {
-        header('Location: index.php');
+        header('Location: feedback.php');
         exit;
     } else {
         echo 'Error: ' . mysqli_error($conn);

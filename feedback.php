@@ -24,12 +24,12 @@
 
                 <div class="flex-grow-1">
                     <p class="mb-2 text-center">
-                        <?php echo $item['body']; ?>
+                        <?php echo htmlspecialchars($item['body']); ?>
                     </p>
 
                     <div class="text-secondary text-center">
                         <p class="mb-0">
-                            By <?php echo $item['name']; ?> on <?php echo $item['date']; ?>
+                            By <?php echo htmlspecialchars($item['name']); ?> on <?php echo $item['date']; ?>
                         </p>
                     </div>
                 </div>
